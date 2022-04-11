@@ -1,0 +1,8 @@
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\eTickets\eTickets\obj\Debug\net5.0\eTickets.csproj.AssemblyReference.cache
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\eTickets\eTickets\obj\Debug\net5.0\eTickets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\eTickets\eTickets\obj\Debug\net5.0\eTickets.AssemblyInfoInputs.cache
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\eTickets\eTickets\obj\Debug\net5.0\eTickets.AssemblyInfo.cs
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\eTickets\eTickets\obj\Debug\net5.0\eTickets.csproj.CoreCompileInputs.cache
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\eTickets\eTickets\obj\Debug\net5.0\eTickets.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\eTickets\eTickets\obj\Debug\net5.0\eTickets.RazorAssemblyInfo.cache
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\eTickets\eTickets\obj\Debug\net5.0\eTickets.RazorAssemblyInfo.cs
