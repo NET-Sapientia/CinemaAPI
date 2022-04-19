@@ -55,28 +55,35 @@ namespace eTickets.Data
                         new Actor()
                         {
                             FullName = "Dylan O'Brien",   //Dylan O'Brien
-                            Bio = "This is the Bio of the first actor",
+                            Bio = "This is the Bio of Dylan O'Brien",
                             ProfilePictureURL = "images/Dylan_OBrien.jpg",
 
                         },
                         new Actor()
                         {
                             FullName = "Thomas Brodie-Sangster",  //Thomas Brodie-Sangster
-                            Bio = "This is the Bio of the second actor",
+                            Bio = "This is the Bio of Thomas Brodie-Sangster",
                             ProfilePictureURL = "images/Thomas_Brodie_Sangster.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Kim Min-gue",   //Kim Min-gue
-                            Bio = "This is the Bio of the second actor",
+                            Bio = "This is the Bio of Kim Min-gue",
                             ProfilePictureURL = "images/Kim_Min_gue.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Joseph Gordon-Levitt",  //Joseph Gordon-Levitt
-                            Bio = "This is the Bio of the second actor",
+                            Bio = "This is the Bio of Joseph Gordon-Levitt",
                             ProfilePictureURL = "images/Joseph_Gordon_Levitt.jpg"
                         },
+                        new Actor()
+                        {
+                            FullName = "Selena Gomez",  //Selena Gomez
+                            Bio = "This is the Bio of Selena Gomez",
+                            ProfilePictureURL = "images/Selena.jpg"
+                        },
+
                     });
                     context.SaveChanges();
                 }
@@ -87,28 +94,34 @@ namespace eTickets.Data
                     {
                         new Producer()
                         {
-                            FullName = "Producer 1",  //off Maze Runner
-                            Bio = "This is the Bio of the first actor",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-1.jpeg"
+                            FullName = "Scott Frank",  //Queens Gambit
+                            Bio = "Bio",
+                            ProfilePictureURL = "images/Scott_Frank.jpg"
 
                         },
                         new Producer()
                         {
-                            FullName = "Producer 2",  //Parasites
-                            Bio = "This is the Bio of the second actor",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-2.jpeg"
+                            FullName = "Bong Joon-ho",  //Parasites
+                            Bio = "Bio",
+                            ProfilePictureURL = "images/Bong Joon-ho.jpg"
                         },
                         new Producer()
                         {
-                            FullName = "Producer 3",  //Queens Gambit
-                            Bio = "This is the Bio of the second actor",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-3.jpeg"
+                            FullName = "Wes Ball",  //The Maze Runner
+                            Bio = "Bio",
+                            ProfilePictureURL = "images/Wes_Ball.jpg"
                         },
                         new Producer()
                         {
-                            FullName = "Producer 4",  //The Walk
-                            Bio = "This is the Bio of the second actor",
-                            ProfilePictureURL = "http://dotnethow.net/images/producers/producer-4.jpeg"
+                            FullName = "Robert Zemeckis",  //The Walk
+                            Bio = "Bio",
+                            ProfilePictureURL = "images/Robert_Zemeckis.jpg"
+                        },
+                        new Producer()
+                        {
+                            FullName = "Alice Dewey",  //Hotel Transyilvania 4
+                            Bio = "Bio",
+                            ProfilePictureURL = "images/Alice_Dewey.jpg"
                         },
                     });
                     context.SaveChanges();
@@ -135,12 +148,12 @@ namespace eTickets.Data
                             Name = "The Maze Runner",
                             Description = "This is the Maze Runner description",
                             Price = 29.50,
-                            ImageURL = "images/",
+                            ImageURL = "images/The_Maze_Runner.jpg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(3),
                             CinemaId = 1,
                             ProducerId = 1,
-                            MovieCategory = MovieCategory.Action  //science fiction
+                            MovieCategory = MovieCategory.science_fiction  //science fiction
                         },
                         new Movie()
                         {
@@ -153,6 +166,18 @@ namespace eTickets.Data
                             CinemaId = 4,
                             ProducerId = 4,
                             MovieCategory = MovieCategory.Horror
+                        },
+                        new Movie()
+                        {
+                            Name = "The Walk",
+                            Description = "description",
+                            Price = 39.50,
+                            ImageURL = "images/The_Walk.jpg",
+                            StartDate = DateTime.Now.AddDays(-10),
+                            EndDate = DateTime.Now.AddDays(10),
+                            CinemaId = 5,
+                            ProducerId = 5,
+                            MovieCategory = MovieCategory.Drama
                         },
                         new Movie()
                         {

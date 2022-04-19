@@ -8,12 +8,12 @@ namespace eTickets.Controllers
     {
         private readonly AppDbContext _context;
 
-        public ActorsController(AppDbContext context)
+        public ActorsController(AppDbContext context)  //konstruktor
         {
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index()  //Default-nak adta az Index() nevet
         {
             var data = _context.Actors.ToList();
             return View();
