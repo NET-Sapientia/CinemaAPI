@@ -7,6 +7,8 @@ using System.Linq;
 
 //Itt talalhatok a kepek, a szovegek stb...
 
+//Default-kent megadja a kepeket, a szoveget...
+
 namespace eTickets.Data
 {
     public class AppDbInitializer
@@ -15,7 +17,7 @@ namespace eTickets.Data
         {
             using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
-                var context = serviceScope.ServiceProvider.GetService < AppDbContext>();
+                var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
 
                 context.Database.EnsureCreated();
 
@@ -61,12 +63,6 @@ namespace eTickets.Data
                         },
                         new Actor()
                         {
-                            FullName = "Thomas Brodie-Sangster",  //Thomas Brodie-Sangster
-                            Bio = "This is the Bio of Thomas Brodie-Sangster",
-                            ProfilePictureURL = "images/Thomas_Brodie_Sangster.jpg"
-                        },
-                        new Actor()
-                        {
                             FullName = "Kim Min-gue",   //Kim Min-gue
                             Bio = "This is the Bio of Kim Min-gue",
                             ProfilePictureURL = "images/Kim_Min_gue.jpg"
@@ -94,16 +90,9 @@ namespace eTickets.Data
                     {
                         new Producer()
                         {
-                            FullName = "Scott Frank",  //Queens Gambit
-                            Bio = "Bio",
-                            ProfilePictureURL = "images/Scott_Frank.jpg"
-
-                        },
-                        new Producer()
-                        {
                             FullName = "Bong Joon-ho",  //Parasites
                             Bio = "Bio",
-                            ProfilePictureURL = "images/Bong Joon-ho.jpg"
+                            ProfilePictureURL = "images/Bong_Joon-ho.jpg"
                         },
                         new Producer()
                         {
@@ -133,18 +122,6 @@ namespace eTickets.Data
                     {
                         new Movie()
                         {
-                            Name = "The Queens Gambit",
-                            Description = "description",
-                            Price = 39.50,
-                            ImageURL = "images/",
-                            StartDate = DateTime.Now.AddDays(-10),
-                            EndDate = DateTime.Now.AddDays(10),
-                            CinemaId = 3,
-                            ProducerId = 3,
-                            MovieCategory = MovieCategory.Drama
-                        },
-                        new Movie()
-                        {
                             Name = "The Maze Runner",
                             Description = "This is the Maze Runner description",
                             Price = 29.50,
@@ -163,8 +140,8 @@ namespace eTickets.Data
                             ImageURL = "images/Parasites.jpg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
-                            CinemaId = 4,
-                            ProducerId = 4,
+                            CinemaId = 2,
+                            ProducerId = 2,
                             MovieCategory = MovieCategory.Horror
                         },
                         new Movie()
@@ -175,8 +152,8 @@ namespace eTickets.Data
                             ImageURL = "images/The_Walk.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(10),
-                            CinemaId = 5,
-                            ProducerId = 5,
+                            CinemaId = 3,
+                            ProducerId = 3,
                             MovieCategory = MovieCategory.Drama
                         },
                         new Movie()
@@ -187,8 +164,8 @@ namespace eTickets.Data
                             ImageURL = "images/Hotel_Transylvania_4.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
-                            CinemaId = 1,
-                            ProducerId = 2,
+                            CinemaId = 3,
+                            ProducerId = 4,
                             MovieCategory = MovieCategory.Cartoon
                         },
                     });
@@ -206,92 +183,69 @@ namespace eTickets.Data
                         },
                         new Actor_Movie()
                         {
-                            ActorId = 3,
+                            ActorId = 2,
                             MovieId = 1
                         },
+                        new Actor_Movie()
+                        {
+                            ActorId = 4,
+                            MovieId = 1
+                        },
+                        /**/
 
-                         new Actor_Movie()
+                        new Actor_Movie()
                         {
                             ActorId = 1,
                             MovieId = 2
                         },
+
                          new Actor_Movie()
                         {
-                            ActorId = 4,
+                            ActorId = 2,
+                            MovieId = 2
+                        },
+                          new Actor_Movie()
+                        {
+                            ActorId = 3,
                             MovieId = 2
                         },
 
-                        new Actor_Movie()
+                          /**/
+                            new Actor_Movie()
                         {
                             ActorId = 1,
                             MovieId = 3
                         },
-                        new Actor_Movie()
+
+                              new Actor_Movie()
                         {
-                            ActorId = 2,
-                            MovieId = 3
-                        },
-                        new Actor_Movie()
-                        {
-                            ActorId = 5,
+                            ActorId = 4,
                             MovieId = 3
                         },
 
-
-                        new Actor_Movie()
+                                new Actor_Movie()
+                        {
+                            ActorId = 3,
+                            MovieId = 3
+                        },
+                                /**/
+                         new Actor_Movie()
                         {
                             ActorId = 2,
                             MovieId = 4
                         },
-                        new Actor_Movie()
+                          new Actor_Movie()
                         {
-                            ActorId = 3,
+                            ActorId = 1,
                             MovieId = 4
                         },
-                        new Actor_Movie()
+                           new Actor_Movie()
                         {
                             ActorId = 4,
                             MovieId = 4
                         },
 
 
-                        new Actor_Movie()
-                        {
-                            ActorId = 2,
-                            MovieId = 5
-                        },
-                        new Actor_Movie()
-                        {
-                            ActorId = 3,
-                            MovieId = 5
-                        },
-                        new Actor_Movie()
-                        {
-                            ActorId = 4,
-                            MovieId = 5
-                        },
-                        new Actor_Movie()
-                        {
-                            ActorId = 5,
-                            MovieId = 5
-                        },
-
-
-                        new Actor_Movie()
-                        {
-                            ActorId = 3,
-                            MovieId = 6
-                        },
-                        new Actor_Movie()
-                        {
-                            ActorId = 4,
-                            MovieId = 6
-                        },
-                        new Actor_Movie()
-                        {
-                            ActorId = 5,
-                            MovieId = 6
-                        },
                     });
                     context.SaveChanges();
                 }

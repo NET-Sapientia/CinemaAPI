@@ -1,0 +1,45 @@
+﻿@**define model*@
+@model List<Actor>
+
+@*define view data*@
+@{
+	ViewData["Title"] = "List of Actors";
+}
+
+@*write code*@
+<div>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>Profile Picture URL</th>
+					<th>Full Name</th>
+					<th>Bio</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>
+							<img class="rounded-circle" src="@item.ProfilePictureURL" style="max-width: 150px"/>
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.FullName)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Bio)
+						</td>
+						<td>
+							<a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a>
+							<a class="btn btn-outline-info"><i class="bi bi-eye"></i>Details</a>
+							<a class="btn btn-outline-danger"><i class="bi bi-pencil-trash"></i>Delete</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+			
+		</table>
+	</div>
+</div>
