@@ -13,4 +13,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\dylan.jpg" />
+  </ItemGroup>
+
 </Project>

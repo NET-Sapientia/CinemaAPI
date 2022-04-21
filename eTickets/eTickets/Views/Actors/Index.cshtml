@@ -23,7 +23,7 @@
 				{
 					<tr>
 						<td>
-							<img src="@item.ProfilePictureURL" style="max-width: 150px"/>
+							<img src="@Url.Content(@item.ProfilePictureURL)" style="max-width: 150px"/>
 						</td>
 						<td>
 							@Html.DisplayFor(modelItem => item.FullName)
