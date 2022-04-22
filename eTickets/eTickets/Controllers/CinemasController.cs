@@ -17,8 +17,8 @@ namespace eTickets.Controllers
         //If you want u can get all the Producers -->
         public async Task<IActionResult> Index()
         {
-            var allProducers = await _context.Cinemas.ToListAsync();
-            return View();
+            var allCinemas = await _context.Cinemas.ToListAsync();
+            return View(allCinemas);
         }
     }
 }
