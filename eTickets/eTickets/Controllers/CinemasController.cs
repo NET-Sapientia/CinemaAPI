@@ -18,6 +18,8 @@ namespace eTickets.Controllers
         public async Task<IActionResult> Index()
         {
             var allCinemas = await _context.Cinemas.ToListAsync();
+
+            //API-T get, set, hogy ne az adatbazisbol kerje le hanem mashonnan 
             return View(allCinemas);
         }
     }
