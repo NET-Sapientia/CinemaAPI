@@ -19,7 +19,7 @@ namespace API.Data
             {
                 var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
 
-                context.Database.EnsureCreated();
+                //context.Database.EnsureCreated();
 
                 //Cinema
                 if (!context.Cinemas.Any())
