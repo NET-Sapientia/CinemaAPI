@@ -73,7 +73,7 @@ namespace API.Controllers
             throw new NotImplementedException();
         }
 
-        private bool AlgorithmExists(int id)
+        private bool ActorExists(int id)
         {
             throw new NotImplementedException();
         }
