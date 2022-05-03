@@ -19,5 +19,7 @@ namespace API.Services
 
         public Task<IEnumerable<Cinema>> GetCinemas();
 
+        public Task<IEnumerable<Actor>> GetActor(int id);
     }
+    
 }

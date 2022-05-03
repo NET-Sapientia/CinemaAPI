@@ -11,5 +11,7 @@ namespace API.Repositories
         public Task<IEnumerable<Actor>> GetActors();
 
         public Task<IEnumerable<Cinema>> GetCinemas();
+
+        public Task<IEnumerable<Actor>> GetActor(int id);
     }
 }

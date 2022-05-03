@@ -139,6 +139,12 @@ namespace API.Services
 
         }
 
+        public async Task<IEnumerable<Actor>> GetActor(int id)
+        {
+            return await _algorithmRepository.GetActor(id);
+
+        }
+
         public async Task<IEnumerable<Cinema>> GetCinemas()
         {
             return await _algorithmRepository.GetCinemas();

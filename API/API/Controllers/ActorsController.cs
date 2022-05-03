@@ -55,7 +55,7 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ActorResponse>> GetActor(int id)
         {
-            throw new NotImplementedException();
+            return Ok(_algorithmService.GetActor(id));
         }
 
         // PUT: api/Algorithms/5

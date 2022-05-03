@@ -81,6 +81,12 @@ namespace API.Repositories
 
         }
 
+        public async Task<IEnumerable<Actor>> GetActor(int id)
+        {
+            return _context.Actors.AsQueryable().Where(a => a.Id == id);
+
+        }
+
         public async Task<IEnumerable<Cinema>> GetCinemas()
         {
             return _context.Cinemas;
