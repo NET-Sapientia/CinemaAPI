@@ -60,9 +60,9 @@ namespace API.Controllers
 
         // PUT: api/Algorithms/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutActor(int id, [FromBody] ActorRequest actor)
+        public async Task<IActionResult> PutActor(int id,[FromBody] Actor actor)
         {
-            throw new NotImplementedException();
+            return Ok(_algorithmService.PutActor(id, actor));
         }
 
 

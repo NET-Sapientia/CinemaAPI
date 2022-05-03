@@ -151,7 +151,10 @@ namespace API.Services
 
         }
 
-
+        public async Task<Actor> PutActor(int id, Actor actor)
+        {
+            return await _algorithmRepository.PutActor(id, actor);
+        }
     }
 }
 

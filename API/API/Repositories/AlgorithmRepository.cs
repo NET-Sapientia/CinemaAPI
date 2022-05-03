@@ -2,6 +2,7 @@
 using API.Data.Models;
 using API.Exceptions;
 using API.Utils;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Repositories
 {
@@ -90,6 +91,20 @@ namespace API.Repositories
         public async Task<IEnumerable<Cinema>> GetCinemas()
         {
             return _context.Cinemas;
+
+        }
+
+        public async Task<Actor> PutActor(int id, Actor actor)
+        {
+
+            int count = await _context.Actors.AsQueryable().Where(it => it.Id == id).CountAsync();
+            if (count != 1)
+            {
+                throw new Exception("The Actor is not in the database");
+            }
+            var result = _context.Actors.Update(actor);
+            _context.SaveChanges();
+            return actor;
 
         }
     }
