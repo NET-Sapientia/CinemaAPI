@@ -4,11 +4,9 @@ namespace API.Data.Requests
 {
     public class ActorRequest
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public AlgorithmType Type { get; set; }
-        public string? Icon { get; set; }
-        public string? Url { get; set; }
-        public string? AlgorithmNickname { get; set; }
+        public int Id { get; set; }
+        public string ProfilePictureURL { get; set; }
+        public string FullName { get; set; }
+        public string Bio { get; set; }
     }
 }
