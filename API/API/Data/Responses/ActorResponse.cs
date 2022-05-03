@@ -4,7 +4,7 @@ namespace API.Data.Responses
 {
     public class ActorResponse
     {
-        public Algorithm? Algorithm { get; set; }
+        public Actor? Algorithm { get; set; }
         public string Message { get; set; }
         public int Code { get; set; }
     }
