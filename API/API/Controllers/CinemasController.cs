@@ -1,9 +1,9 @@
-﻿using eTickets.Data;
+﻿using API.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace eTickets.Controllers
+namespace API.Controllers
 {
     public class CinemasController : Controller
     {

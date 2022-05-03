@@ -260,3 +260,11 @@ C:\Users\DNGVA\Source\Repos\API_Template\API_Template\API\API\obj\Debug\net6.0\r
 C:\Users\DNGVA\Source\Repos\API_Template\API_Template\API\API\obj\Debug\net6.0\API.pdb
 C:\Users\DNGVA\Source\Repos\API_Template\API_Template\API\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\DNGVA\Source\Repos\API_Template\API_Template\API\API\obj\Debug\net6.0\ref\API.dll
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\API\API\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\API\API\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\API\API\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\API\API\obj\Debug\net6.0\API.AssemblyInfo.cs
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\API\API\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\API\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\API\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vrenc\OneDrive\Documents\E G Y E T E M\CinemaAPI\API\API\obj\Debug\net6.0\API.pdb

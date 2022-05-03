@@ -1,4 +1,4 @@
-﻿using API.Data.Models;  //new Cinema(){...}....
+﻿using eTickets.Models;  //new Cinema(){...}....
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 
 //Default-kent megadja a kepeket, a szoveget...
 
-namespace API.Data
+namespace eTickets.Data
 {
     public class AppDbInitializer
     {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\API.csproj": {}
+    "C:\\Users\\vrenc\\OneDrive\\Documents\\E G Y E T E M\\CinemaAPI\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\API.csproj": {
+    "C:\\Users\\vrenc\\OneDrive\\Documents\\E G Y E T E M\\CinemaAPI\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\vrenc\\OneDrive\\Documents\\E G Y E T E M\\CinemaAPI\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\DNGVA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\obj\\",
+        "projectPath": "C:\\Users\\vrenc\\OneDrive\\Documents\\E G Y E T E M\\CinemaAPI\\API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\vrenc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vrenc\\OneDrive\\Documents\\E G Y E T E M\\CinemaAPI\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DNGVA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vrenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

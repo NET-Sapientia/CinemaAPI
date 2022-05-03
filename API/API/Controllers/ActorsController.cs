@@ -1,8 +1,8 @@
-﻿using eTickets.Data;
+﻿using API.Data;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
-namespace eTickets.Controllers
+namespace API.Controllers
 {
     public class ActorsController : Controller
     {
