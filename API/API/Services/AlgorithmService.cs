@@ -46,21 +46,94 @@ namespace API.Services
 
         }
 
-        public Task<MovieResponse> AddNewMovie(MovieRequest newActor)
+        public async Task<MovieResponse> AddNewMovie(MovieRequest newMovie)
         {
+            Movie movie = new Movie()
+            {
+                Id = newMovie.Id,
+                Name = newMovie.Name,
+                Description = newMovie.Description,
+                Price = newMovie.Price,
+                ImageURL = newMovie.ImageURL,
+                StartDate = newMovie.StartDate,
+                EndDate = newMovie.EndDate,
+                MovieCategory = newMovie.MovieCategory,
+            };
+            MovieResponse response = new MovieResponse();
+
+            try
+            {
+                response.Movie = await _algorithmRepository.AddNewMovie(movie);
+                if (response.Movie != null)
+                {
+                    response.Code = 200;
+                    response.Message = APISuccessCodes.ADD_ALGORITHM_SUCCESS;
+                }
+                return response;
+            }
+            catch (AddRequestException ex)
+            {
+                throw new AddException(ex.Message);
+            }
 
         }
 
-        public Task<CinemaResponse> AddNewCinema(CinemaRequest newActor)
+        public async Task<CinemaResponse> AddNewCinema(CinemaRequest newCinema)
         {
+            Cinema cinema = new Cinema()
+            {
+                Id = newCinema.Id,
+                Logo = newCinema.Logo,
+                Name = newCinema.Name,
+                Description = newCinema.Description,
+            };
+            CinemaResponse response = new CinemaResponse();
 
+            try
+            {
+                response.Cinema = await _algorithmRepository.AddNewCinema(cinema);
+                if (response.Cinema != null)
+                {
+                    response.Code = 200;
+                    response.Message = APISuccessCodes.ADD_ALGORITHM_SUCCESS;
+                }
+                return response;
+            }
+            catch (AddRequestException ex)
+            {
+                throw new AddException(ex.Message);
+            }
         }
 
-        public Task<ProducerResponse> AddNewProducer(ProducerRequest newActor)
-        {
 
+        public async Task<ProducerResponse> AddNewProducer(ProducerRequest newProducer)
+        {
+            Producer producer = new Producer()
+            {
+                Id = newProducer.Id,
+                ProfilePictureURL = newProducer.ProfilePictureURL,
+                FullName = newProducer.FullName,
+                Bio = newProducer.Bio,
+            };
+            ProducerResponse response = new ProducerResponse();
+
+            try
+            {
+                response.Producer = await _algorithmRepository.AddNewProducer(producer);
+                if (response.Producer != null)
+                {
+                    response.Code = 200;
+                    response.Message = APISuccessCodes.ADD_ALGORITHM_SUCCESS;
+                }
+                return response;
+            }
+            catch (AddRequestException ex)
+            {
+                throw new AddException(ex.Message);
+            }
         }
 
 
     }
 }
+
