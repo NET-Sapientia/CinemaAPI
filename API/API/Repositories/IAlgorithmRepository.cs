@@ -4,6 +4,9 @@ namespace API.Repositories
 {
     public interface IAlgorithmRepository
     {
-        public Task<Algorithm> AddNewAlgorithm(Algorithm newAlgorithm);
+        public Task<Actor> AddNewActor(Actor newActor);
+        public Task<Producer> AddNewProducer(Producer newProducer);
+        public Task<Movie> AddNewMovie(Movie newMovie);
+        public Task<Cinema> AddNewCinema(Cinema newCinema);
     }
 }

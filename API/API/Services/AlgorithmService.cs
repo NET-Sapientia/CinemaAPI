@@ -18,16 +18,16 @@ namespace API.Services
         }
 
 
-        public async Task<AlgorithmResponse> AddNewAlgorithm(AlgorithmRequest newAlgorithm)
+        public async Task<AlgorithmResponse> AddNewActor(AlgorithmRequest newActor)
         {
             Algorithm algorithm = new Algorithm()
             {
-                Name = newAlgorithm.Name,
-                Description = newAlgorithm.Description,
-                Type = newAlgorithm.Type,
-                AlgorithmNickname = newAlgorithm.AlgorithmNickname,
-                Icon = newAlgorithm.Icon,
-                Url = newAlgorithm.Url,
+                Name = newActor.Name,
+                Description = newActor.Description,
+                Type = newActor.Type,
+                AlgorithmNickname = newActor.AlgorithmNickname,
+                Icon = newActor.Icon,
+                Url = newActor.Url,
                 IsPublished = false,
                 CreationDate = DateTime.Now
             };
@@ -37,7 +37,7 @@ namespace API.Services
 
             try
             {
-                response.Algorithm = await _algorithmRepository.AddNewAlgorithm(algorithm);
+                response.Algorithm = await _algorithmRepository.AddNewActor(newActor);
                 if (response.Algorithm != null)
                 {
                     response.Code = 200;

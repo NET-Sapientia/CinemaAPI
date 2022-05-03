@@ -15,13 +15,58 @@ namespace API.Repositories
             _context = context;
         }
 
-        public async Task<Algorithm> AddNewAlgorithm(Algorithm newAlgorithm)
+        public async Task<Actor> AddNewActor(Actor newActor)
         {
             try
             {
-                var addResponse =  _context.Algorithms.Add(newAlgorithm);
+                var addResponse =  _context.Actors.Add(newActor);
                 await _context.SaveChangesAsync();
                 
+                return addResponse.Entity;
+            }
+            catch (Exception ex)
+            {
+                throw new AddRequestException(ex.Message);
+            }
+        }
+
+        public async Task<Producer> AddNewProducer(Producer newProducer)
+        {
+            try
+            {
+                var addResponse = _context.Producers.Add(newProducer);
+                await _context.SaveChangesAsync();
+
+                return addResponse.Entity;
+            }
+            catch (Exception ex)
+            {
+                throw new AddRequestException(ex.Message);
+            }
+        }
+
+        public async Task<Movie> AddNewMovie(Movie newMovie)
+        {
+            try
+            {
+                var addResponse = _context.Movies.Add(newMovie);
+                await _context.SaveChangesAsync();
+
+                return addResponse.Entity;
+            }
+            catch (Exception ex)
+            {
+                throw new AddRequestException(ex.Message);
+            }
+        }
+
+        public async Task<Cinema> AddNewCinema(Cinema newCinema)
+        {
+            try
+            {
+                var addResponse = _context.Cinemas.Add(newCinema);
+                await _context.SaveChangesAsync();
+
                 return addResponse.Entity;
             }
             catch (Exception ex)
