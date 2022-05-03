@@ -17,28 +17,22 @@ namespace API.Services
             _algorithmRepository = algorithmRepository;
         }
 
-
-        public async Task<AlgorithmResponse> AddNewActor(AlgorithmRequest newActor)
+        public async Task<ActorResponse> AddNewActor(ActorRequest newActor)
         {
-            Algorithm algorithm = new Algorithm()
+            Actor actor = new Actor()
             {
-                Name = newActor.Name,
-                Description = newActor.Description,
-                Type = newActor.Type,
-                AlgorithmNickname = newActor.AlgorithmNickname,
-                Icon = newActor.Icon,
-                Url = newActor.Url,
-                IsPublished = false,
-                CreationDate = DateTime.Now
+                Id = newActor.Id,
+                ProfilePictureURL = newActor.ProfilePictureURL,
+                FullName = newActor.FullName,
+                Bio = newActor.FullName
             };
 
-            AlgorithmResponse response = new AlgorithmResponse();
-
+            ActorResponse response = new ActorResponse();
 
             try
             {
-                response.Algorithm = await _algorithmRepository.AddNewActor(newActor);
-                if (response.Algorithm != null)
+                response.Actor = await _algorithmRepository.AddNewActor(actor);
+                if (response.Actor != null)
                 {
                     response.Code = 200;
                     response.Message = APISuccessCodes.ADD_ALGORITHM_SUCCESS;
@@ -49,8 +43,24 @@ namespace API.Services
             {
                 throw new AddException(ex.Message);
             }
+
         }
 
-        
+        public Task<MovieResponse> AddNewMovie(MovieRequest newActor)
+        {
+
+        }
+
+        public Task<CinemaResponse> AddNewCinema(CinemaRequest newActor)
+        {
+
+        }
+
+        public Task<ProducerResponse> AddNewProducer(ProducerRequest newActor)
+        {
+
+        }
+
+
     }
 }

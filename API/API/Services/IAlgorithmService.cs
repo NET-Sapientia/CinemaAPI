@@ -5,7 +5,6 @@ namespace API.Services
 {
     public interface IAlgorithmService
     {
-        public Task<AlgorithmResponse> AddNewAlgorithm(AlgorithmRequest newAlgorithm);
 
         public Task<ActorResponse> AddNewActor(ActorRequest newActor);
 
