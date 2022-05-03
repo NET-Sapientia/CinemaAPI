@@ -1,11 +1,12 @@
 ﻿using API.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    public class CinemasController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class CinemasController : ControllerBase
     {
         private readonly AppDbContext _context;
 

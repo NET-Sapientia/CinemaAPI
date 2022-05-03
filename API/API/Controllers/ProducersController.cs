@@ -1,12 +1,13 @@
 ﻿using API.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    public class ProducersController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class ProducersController : ControllerBase
     {
         private readonly AppDbContext _context;
 
