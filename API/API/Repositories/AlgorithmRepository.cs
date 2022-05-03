@@ -80,5 +80,11 @@ namespace API.Repositories
             return _context.Actors;
 
         }
+
+        public async Task<IEnumerable<Cinema>> GetCinemas()
+        {
+            return _context.Cinemas;
+
+        }
     }
 }

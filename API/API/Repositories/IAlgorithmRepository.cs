@@ -9,5 +9,7 @@ namespace API.Repositories
         public Task<Movie> AddNewMovie(Movie newMovie);
         public Task<Cinema> AddNewCinema(Cinema newCinema);
         public Task<IEnumerable<Actor>> GetActors();
+
+        public Task<IEnumerable<Cinema>> GetCinemas();
     }
 }

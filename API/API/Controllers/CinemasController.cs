@@ -48,7 +48,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cinema>>> GetCinemas()
         {
-            throw new NotImplementedException();
+            return Ok(_algorithmService.GetCinemas());
         }
 
         // GET: api/Algorithms/5
