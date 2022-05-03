@@ -133,6 +133,12 @@ namespace API.Services
             }
         }
 
+        public async Task<IEnumerable<Actor>> GetActors()
+        {
+            return await _algorithmRepository.GetActors();
+
+        }
+
 
     }
 }

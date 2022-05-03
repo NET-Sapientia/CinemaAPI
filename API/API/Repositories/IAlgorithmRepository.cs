@@ -8,5 +8,6 @@ namespace API.Repositories
         public Task<Producer> AddNewProducer(Producer newProducer);
         public Task<Movie> AddNewMovie(Movie newMovie);
         public Task<Cinema> AddNewCinema(Cinema newCinema);
+        public Task<IEnumerable<Actor>> GetActors();
     }
 }

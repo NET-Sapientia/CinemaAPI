@@ -48,7 +48,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Actor>>> GetActors()
         {
-            throw new NotImplementedException();
+            return Ok(_algorithmService.GetActors());
         }
 
         // GET: api/Algorithms/5

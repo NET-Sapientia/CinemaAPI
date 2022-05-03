@@ -74,5 +74,11 @@ namespace API.Repositories
                 throw new AddRequestException(ex.Message);
             }
         }
+
+        public async Task<IEnumerable<Actor>> GetActors()
+        {
+            return _context.Actors;
+
+        }
     }
 }

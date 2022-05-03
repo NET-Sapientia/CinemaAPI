@@ -1,4 +1,5 @@
-﻿using API.Data.Requests;
+﻿using API.Data.Models;
+using API.Data.Requests;
 using API.Data.Responses;
 
 namespace API.Services
@@ -13,6 +14,8 @@ namespace API.Services
         public Task<CinemaResponse> AddNewCinema(CinemaRequest newActor);
 
         public Task<ProducerResponse> AddNewProducer(ProducerRequest newActor);
+
+        public Task<IEnumerable<Actor>> GetActors();
 
     }
 }
