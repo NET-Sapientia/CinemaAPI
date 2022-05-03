@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\eTickets\\eTickets\\eTickets.csproj": {}
+    "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\eTickets\\eTickets\\eTickets.csproj": {
+    "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\eTickets\\eTickets\\eTickets.csproj",
-        "projectName": "eTickets",
-        "projectPath": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\eTickets\\eTickets\\eTickets.csproj",
+        "projectUniqueName": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\API.csproj",
         "packagesPath": "C:\\Users\\DNGVA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\eTickets\\eTickets\\obj\\",
+        "outputPath": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DNGVA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,27 +40,27 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNet.WebApi.Client": {
-              "target": "Package",
-              "version": "[5.2.8, )"
-            },
-            "Microsoft.AspNet.WebApi.Core": {
-              "target": "Package",
-              "version": "[5.2.8, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
