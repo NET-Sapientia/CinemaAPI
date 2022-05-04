@@ -8,12 +8,12 @@ Jelen projekttel azt a célt tűztűk ki, hogy létrehozzunk egy API-t, (Applica
 
 A projektnek emellett tartalmaznia kell egy felületet, (user-facing, front-end), ami segítségével a felhasználó intuitív módon hozzáfér az említett API-hoz. Lehetőséget adunk böngészni a filmek, mozik, színészek között, és a megfelelő hozzáférésű felhasználó akár frissítheti is az adatokat, vagy új információt adhat hozzá az adatbázishoz.
 
-Bár az általunk elkészítet front-end felület egy weboldal, az API előnye, hogy más környezetben, például egy mobil-alkalmazásban, vagy egy terminál-programban is felhasználható. 
+Bár az általunk elkészített front-end felület egy weboldal, az API előnye, hogy más környezetben, például egy mobil-alkalmazásban, vagy egy terminál-programban is felhasználható. 
 ## Követelmények specifikáció
 ### Felhasználói követelmények
-A felhasználó amint megnyitja a weboldalt a "Movies" (magyarul Filmek) oldalt látja elsőként. Ezen az oldalon található négy darab film. Mindegyik filmnek van egy cÍme, egy képe, egy kategóriája, kezdési dátuma (mikortol lett/lessz érvényes a film a mozikban), végzési dátuma (mikortól nem lessz többet érvényes a film a mozikban), statusa (ami a mai dátumhoz viszonyítva kiírja, hogy érvényes-e az a film vagy sem), "Show Details" gombja es "Add To Cart (ár)" gombja. Ezen az oldalon vannak menük is, amik a következőképpen vannak elnevezve: "eTickets" (ha erre rákattint a felhasználó, akkor visszarakja az eredeti oldalra), "Movies" (ugyanazt csinálja mint az "eTickets") és "Management". A menüben a jobb oldalon található egy keresési söoveg doboz.
+A felhasználó amint megnyitja a weboldalt a "Movies" (magyarul Filmek) oldalt látja elsőként. Ezen az oldalon található négy darab film. Mindegyik filmnek van egy címe, egy képe, egy kategóriája, kezdési dátuma (mikortól lett/lesz érvényes a film a mozikban), végzési dátuma (mikortól nem lesz többet érvényes a film a mozikban), státusza (ami a mai dátumhoz viszonyítva kiírja, hogy érvényes-e az a film vagy sem), "Show Details" gombja és "Add To Cart (ár)" gombja. Ezen az oldalon vannak menük is, amik a következőképpen vannak elnevezve: "eTickets" (ha erre rákattint a felhasználó, akkor visszarakja az eredeti oldalra), "Movies" (ugyanazt csinálja mint az "eTickets") és "Management". A menüben a jobb oldalon található egy keresési szöveg doboz.
 
-Ha a felhasználó rákattint a "Management" elnevezésü gombra, akkor három linket talál: "Producers", "Actors", "Cinemas" (magyarul, Szervezők, Szinészek, Mozik). Mindegyik link egy külön-külön oldalra irányitja a felhasználót. Ha a felhasználó rákattint az "Actors" gombra, akkor egy új ablak ugrik fel ahol megtalálhatok a színészek nevei, képei és leírása. Ezen az oldalon mindegyik szinésznek van külön-külön képe, leírása, és a következő gombjai: "Delete" (Törlés), "Edit" (Szerkesztés), "Details" (leírás). Ha ezen az oldalon a felhasználó legörget, akkor egy olyan gomb jelenik meg amin azt írja, hogy "Add New". Ennek a gombnak a segítségével a felhasználó beteheti akár a kedvenc szinészének az adatait.
+Ha a felhasználó rákattint a "Management" elnevezésű gombra, akkor három linket talál: "Producers", "Actors", "Cinemas" (magyarul, Szervezők, Színészek, Mozik). Mindegyik link egy külön-külön oldalra irányítja a felhasználót. Ha a felhasználó rákattint az "Actors" gombra, akkor egy új ablak ugrik fel ahol megtalálhatok a színészek nevei, képei és leírása. Ezen az oldalon mindegyik színésznek van külön-külön képe, leírása, és a következő gombjai: "Delete" (Törlés), "Edit" (Szerkesztés), "Details" (leírás). Ha ezen az oldalon a felhasználó legörget, akkor egy olyan gomb jelenik meg amin azt írja, hogy "Add New". Ennek a gombnak a segítségével a felhasználó beteheti akár a kedvenc színészének az adatait.
 ### Use Case
 todo
 
@@ -22,19 +22,19 @@ todo
 
 - A weboldal megnyitása következtében megjelenik a "Movies" oldala.
 - A "Management" gomb lenyitása következtében megjelenik három darab link: "Producers", "Actors", "Cinemas".
-- A felhasználó rákattinthat ezekre a linkekre es azonnal a felhasználó átlessz téve egy új ablakba.
+- A felhasználó rákattinthat ezekre a linkekre és azonnal a felhasználó át lesz téve egy új ablakba.
 - Ezekben az ablakokban a felhasználó megtalálhassa a színészeket, a film szervezőit illetve a mozi termek nevét.
 - A felhasználó az "Actors" oldalon hozzátud adni új színészt ha szeretne.
 
 ### Nem-Funkcionális
-A weboldal megfelelő müködéséhez a következő rendszerkövetelményeknek kell megfeleljen:
+A weboldal megfelelő működéséhez a következő rendszerkövetelményeknek kell megfeleljen:
 
 
-- Laptop/Számítogép
+- Laptop/Számítógép
 - Windows 10/11 alapú operációs rendszer
 - Egér/Laptop érintőfelület
 - Internet hozzáférés
-- Bongésző
+- Böngésző
 
 ## Tervezés
 A tervezés legfőbb lépése az API megépítéséről szólt. Az elvárt környezet már ismert volt, ezért csak a kód struktúrájáról kellett döntenünk. MVC (Model-View-Controller) struktúrára esett a választás.
