@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace eTickets.Data.Services
 {
-    public class ActorService : IActorsService
+    public class ActorsService : IActorsService
     {
 
         //Constructor
         private readonly AppDbContext _context;
 
-        public ActorService(AppDbContext context)
+        public ActorsService(AppDbContext context)
         {
             _context = context; 
         }
