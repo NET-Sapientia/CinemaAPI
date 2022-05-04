@@ -23,7 +23,7 @@ A weboldal megfelelő müködéséhez a következő rendszerkövetelményeknek k
 ## Összegzés
 ### További fejlesztéseink
 Mi szerettük volna ezt a weboldalt avval kibővíteni, hogy legyen regisztrálási lehetőség a felhasználónak, illetve rendelési hozzáférése.
-Valamint még azt szerettük volna megcsinálni, hogy a weboldal működjön telefonon is.
+Valamint még azt szerettük volna megcsinálni, hogy a weboldal működjön telefonon is, viszont ezeknek a megvalósításához több időre lenne szükség.
 
 
 
