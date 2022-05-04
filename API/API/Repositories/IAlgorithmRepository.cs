@@ -32,6 +32,10 @@ namespace API.Repositories
 
         public Task<Actor> PutActor(int id, Actor actor);
 
+        //DELETE
+
+        public Task<Actor> DeleteActor(int id);
+
         
     }
 }

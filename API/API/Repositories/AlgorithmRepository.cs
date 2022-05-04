@@ -137,8 +137,15 @@ namespace API.Repositories
 
         }
 
+        //DELETE
+
+        public Task<Actor> DeleteActor(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         
 
-       
+        
     }
 }

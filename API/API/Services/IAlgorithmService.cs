@@ -39,6 +39,9 @@ namespace API.Services
         //PUT
 
         public Task<Actor> PutActor(int id, Actor actor);
+
+        //DELETE
+        public Task<IEnumerable<Actor>> DeleteActor(int id);
     }
     
 }

@@ -68,9 +68,10 @@ namespace API.Controllers
 
         //DELETE: api/Algorithms/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteActor(int id)
+        public async Task<ActionResult<ActorResponse>> DeleteActor(int id)
         {
-            throw new NotImplementedException();
+            return Ok(_algorithmService.DeleteActor(id));
+
         }
 
         private bool ActorExists(int id)
