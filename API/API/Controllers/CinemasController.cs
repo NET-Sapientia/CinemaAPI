@@ -55,7 +55,7 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<CinemaResponse>> GetCinema(int id)
         {
-            throw new NotImplementedException();
+            return Ok(_algorithmService.GetCinema(id));
         }
 
         // PUT: api/Algorithms/5

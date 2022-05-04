@@ -48,14 +48,14 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
         {
-            throw new NotImplementedException();
+            return Ok(_algorithmService.GetMovies());
         }
 
         // GET: api/Algorithms/5
         [HttpGet("{id}")]
         public async Task<ActionResult<MovieResponse>> GetMovie(int id)
         {
-            throw new NotImplementedException();
+            return Ok(_algorithmService.GetMovie(id));
         }
 
         // PUT: api/Algorithms/5

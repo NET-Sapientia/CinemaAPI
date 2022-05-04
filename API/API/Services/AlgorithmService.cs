@@ -133,15 +133,10 @@ namespace API.Services
             }
         }
 
+        //GET all
         public async Task<IEnumerable<Actor>> GetActors()
         {
             return await _algorithmRepository.GetActors();
-
-        }
-
-        public async Task<IEnumerable<Actor>> GetActor(int id)
-        {
-            return await _algorithmRepository.GetActor(id);
 
         }
 
@@ -151,10 +146,48 @@ namespace API.Services
 
         }
 
+        public async Task<IEnumerable<Movie>> GetMovies()
+        {
+            return await _algorithmRepository.GetMovies();
+        }
+
+        public async Task<IEnumerable<Producer>> GetProducers()
+        {
+            return await _algorithmRepository.GetProducers();
+        }
+
+        //GET by id
+
+        public async Task<IEnumerable<Actor>> GetActor(int id)
+        {
+            return await _algorithmRepository.GetActor(id);
+
+        }
+        public async Task<IEnumerable<Cinema>> GetCinema(int id)
+        {
+            return await _algorithmRepository.GetCinema(id);
+        }
+
+        public async Task<IEnumerable<Movie>> GetMovie(int id)
+        {
+            return await _algorithmRepository.GetMovie(id);
+        }
+
+        public async Task<IEnumerable<Producer>> GetProducer(int id)
+        {
+            return await _algorithmRepository.GetProducer(id);
+        }
+
+        //PUT
+
         public async Task<Actor> PutActor(int id, Actor actor)
         {
             return await _algorithmRepository.PutActor(id, actor);
         }
+
+        
+
+        
     }
 }
 

@@ -76,16 +76,16 @@ namespace API.Repositories
             }
         }
 
+        //GET all
         public async Task<IEnumerable<Actor>> GetActors()
         {
             return _context.Actors;
 
         }
 
-        public async Task<IEnumerable<Actor>> GetActor(int id)
+        public async Task<IEnumerable<Movie>> GetMovies()
         {
-            return _context.Actors.AsQueryable().Where(a => a.Id == id);
-
+            return _context.Movies;
         }
 
         public async Task<IEnumerable<Cinema>> GetCinemas()
@@ -93,6 +93,35 @@ namespace API.Repositories
             return _context.Cinemas;
 
         }
+
+        public async Task<IEnumerable<Producer>> GetProducers()
+        {
+            return _context.Producers;
+        }
+
+        //GET by id
+        public async Task<IEnumerable<Actor>> GetActor(int id)
+        {
+            return _context.Actors.AsQueryable().Where(a => a.Id == id);
+
+        }
+
+        public async Task<IEnumerable<Cinema>> GetCinema(int id)
+        {
+            return _context.Cinemas.AsQueryable().Where(a => a.Id == id);
+        }
+
+        public async Task<IEnumerable<Movie>> GetMovie(int id)
+        {
+            return _context.Movies.AsQueryable().Where(a => a.Id == id);
+        }
+
+        public async Task<IEnumerable<Producer>> GetProducer(int id)
+        {
+           return _context.Producers.AsQueryable().Where(a => a.Id == id);
+        }
+
+        //PUT
 
         public async Task<Actor> PutActor(int id, Actor actor)
         {
@@ -107,5 +136,9 @@ namespace API.Repositories
             return actor;
 
         }
+
+        
+
+       
     }
 }
