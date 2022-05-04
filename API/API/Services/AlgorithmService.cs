@@ -185,9 +185,40 @@ namespace API.Services
             return await _algorithmRepository.PutActor(id, actor);
         }
 
-        
+        //DELETE
+        public Task<IEnumerable<Actor>> DeleteActor(int id)
+        {
+            throw new NotImplementedException();
+        }
 
-        
+
+
+        //DELETE
+
+        /*public async Task<ActorResponse> DeleteActor(int id)
+        {
+            ActorResponse response = new ActorResponse();
+            try
+            {
+                int deletedActorId = await _algorithmRepository.DeleteActor(id);
+                if (deletedActorId != null)
+                {
+                    response.Code = 200;
+                    response.Message = "Employee seleted successfully";
+                }
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }*/
+
+
+
+
+
+
     }
 }
 
