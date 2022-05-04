@@ -1,25 +1,82 @@
 ﻿using API.Data;
+using API.Data.Models;
+using API.Data.Requests;
+using API.Data.Responses;
+using API.Exceptions;
+using API.Services;
+using API.Utils;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    public class ProducersController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ProducersController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAlgorithmService _algorithmService;
 
-        public ProducersController(AppDbContext context)  //konstruktor
+        public ProducersController(IAlgorithmService algorithmService)
         {
-            _context = context;
+            _algorithmService = algorithmService;
         }
 
-        //If you want u can get all the Producers -->
-        public async Task<IActionResult> Index()
+        [HttpPost, Route("add-new-producer")]
+        public async Task<ActionResult<Producer>> PostProducer([FromBody] ProducerRequest producer)
         {
-            var allProducers =await _context.Producers.ToListAsync();
-            return View(allProducers);
+
+            try
+            {
+                ProducerResponse result = await _algorithmService.AddNewProducer(producer);
+                return Ok(result);
+
+            }
+            catch (AddException ex)
+            {
+                ProducerResponse errorResponse = new ProducerResponse()
+                {
+                    Code = 400,
+                    Message = APIErrorCodes.ADD_REQUEST_EXCEPTION_MESSAGE + ex.Message
+                };
+                return BadRequest(errorResponse);
+            }
+
+
         }
+
+        // GET: api/Algorithms
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Producer>>> GetProducers()
+        {
+            return Ok(_algorithmService.GetProducers());
+        }
+
+        // GET: api/Algorithms/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ProducerResponse>> GetProducer(int id)
+        {
+            return Ok(_algorithmService.GetProducer(id));
+        }
+
+        // PUT: api/Algorithms/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutProducer(int id, [FromBody] ProducerRequest producer)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        //DELETE: api/Algorithms/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProducer(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool ProducerExists(int id)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

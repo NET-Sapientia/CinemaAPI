@@ -2,9 +2,9 @@
 
 namespace API.Data.Responses
 {
-    public class AlgorithmResponse
+    public class CinemaResponse
     {
-        public Algorithm? Algorithm { get; set; }
+        public Cinema? Cinema { get; set; }
         public string Message { get; set; }
         public int Code { get; set; }
     }

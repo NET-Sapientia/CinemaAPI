@@ -1,26 +1,83 @@
 ﻿using API.Data;
+using API.Data.Models;
+using API.Data.Requests;
+using API.Data.Responses;
+using API.Exceptions;
+using API.Services;
+using API.Utils;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    public class CinemasController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class CinemasController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAlgorithmService _algorithmService;
 
-        public CinemasController(AppDbContext context)  //konstruktor
+        public CinemasController(IAlgorithmService algorithmService)
         {
-            _context = context;
+            _algorithmService = algorithmService;
         }
 
-        //If you want u can get all the Producers -->
-        public async Task<IActionResult> Index()
+        [HttpPost, Route("add-new-cinema")]
+        public async Task<ActionResult<Cinema>> PostActor([FromBody] CinemaRequest cinema)
         {
-            var allCinemas = await _context.Cinemas.ToListAsync();
 
-            //API-T get, set, hogy ne az adatbazisbol kerje le hanem mashonnan 
-            return View(allCinemas);
+            try
+            {
+                CinemaResponse result = await _algorithmService.AddNewCinema(cinema);
+                return Ok(result);
+
+            }
+            catch (AddException ex)
+            {
+                CinemaResponse errorResponse = new CinemaResponse()
+                {
+                    Code = 400,
+                    Message = APIErrorCodes.ADD_REQUEST_EXCEPTION_MESSAGE + ex.Message
+                };
+                return BadRequest(errorResponse);
+            }
+
+
         }
+
+        // GET: api/Algorithms
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Cinema>>> GetCinemas()
+        {
+            return Ok(_algorithmService.GetCinemas());
+        }
+
+        // GET: api/Algorithms/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CinemaResponse>> GetCinema(int id)
+        {
+            return Ok(_algorithmService.GetCinema(id));
+        }
+
+        // PUT: api/Algorithms/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCinema(int id, [FromBody] CinemaRequest cinema)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        //DELETE: api/Algorithms/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCinema(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool CinemaExists(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }

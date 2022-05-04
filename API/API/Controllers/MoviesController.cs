@@ -1,24 +1,83 @@
 ﻿using API.Data;
+using API.Data.Models;
+using API.Data.Requests;
+using API.Data.Responses;
+using API.Exceptions;
+using API.Services;
+using API.Utils;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    public class MoviesController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class MoviesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAlgorithmService _algorithmService;
 
-        public MoviesController(AppDbContext context)  //konstruktor
+        public MoviesController(IAlgorithmService algorithmService)
         {
-            _context = context;
+            _algorithmService = algorithmService;
         }
 
-        //If you want u can get all the Producers -->
-        public async Task<IActionResult> Index()
+        [HttpPost, Route("add-new-actor")]
+        public async Task<ActionResult<Movie>> PostMovie([FromBody] MovieRequest movie)
         {
-            var allMovies = await _context.Movies.Include(n => n.Cinema).ToListAsync();
-            return View(allMovies);
+
+            try
+            {
+                MovieResponse result = await _algorithmService.AddNewMovie(movie);
+                return Ok(result);
+
+            }
+            catch (AddException ex)
+            {
+                MovieResponse errorResponse = new MovieResponse()
+                {
+                    Code = 400,
+                    Message = APIErrorCodes.ADD_REQUEST_EXCEPTION_MESSAGE + ex.Message
+                };
+                return BadRequest(errorResponse);
+            }
+
+
         }
+
+        // GET: api/Algorithms
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
+        {
+            return Ok(_algorithmService.GetMovies());
+        }
+
+        // GET: api/Algorithms/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<MovieResponse>> GetMovie(int id)
+        {
+            return Ok(_algorithmService.GetMovie(id));
+        }
+
+        // PUT: api/Algorithms/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutMovie(int id, [FromBody] MovieRequest movie)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        //DELETE: api/Algorithms/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteMovie(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool MovieExists(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }

@@ -1,22 +1,32 @@
 ﻿using eTickets.Data;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using eTickets.Data.Services;
+using System.Threading.Tasks;
 
 namespace eTickets.Controllers
 {
     public class ActorsController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IActorsService _service;
 
-        public ActorsController(AppDbContext context)  //konstruktor
+        public ActorsController(IActorsService service)  //konstruktor
         {
-            _context = context;
+            _service = service;
         }
 
-        public IActionResult Index()  //Default-nak adta az Index() nevet
+        public async Task<IActionResult> Index()  //Default-nak adta az Index() nevet
         {
-            var data = _context.Actors.ToList();
+            var data = await _service.GetAllAsync();
             return View(data);
         }
+
+        //Get: Actors/Create
+        public IActionResult Create()  
+        {
+            return View();
+        }
+
+
     }
 }
