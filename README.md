@@ -15,7 +15,7 @@ A felhasználó amint megnyitja a weboldalt a "Movies" (magyarul Filmek) oldalt 
 
 Ha a felhasználó rákattint a "Management" elnevezésű gombra, akkor három linket talál: "Producers", "Actors", "Cinemas" (magyarul, Szervezők, Színészek, Mozik). Mindegyik link egy külön-külön oldalra irányítja a felhasználót. Ha a felhasználó rákattint az "Actors" gombra, akkor egy új ablak ugrik fel ahol megtalálhatok a színészek nevei, képei és leírása. Ezen az oldalon mindegyik színésznek van külön-külön képe, leírása, és a következő gombjai: "Delete" (Törlés), "Edit" (Szerkesztés), "Details" (leírás). Ha ezen az oldalon a felhasználó legörget, akkor egy olyan gomb jelenik meg amin azt írja, hogy "Add New". Ennek a gombnak a segítségével a felhasználó beteheti akár a kedvenc színészének az adatait.
 ### Use Case
-todo
+![Untitled Diagram](https://user-images.githubusercontent.com/59140312/166810181-8d30f50f-9ac9-40c3-8161-1ca0ae27ba2a.png)
 
 ## Rendszerkövetelmények
 ### Funkcionális
