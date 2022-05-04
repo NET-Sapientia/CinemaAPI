@@ -8,7 +8,7 @@ Ha a felhasználó rákattint a "Management" elnevezésü gombra, akkor három l
 ### Funkcionális
 -A weboldal megnyitása következtében megjelenik a "Movies" oldala.
 -A "Management" gomb lenyitása következtében megjelenik három darab link: "Producers", "Actors", "Cinemas".
--A felhasznéló rákattinthat ezekre a linkekre es azonnal a felhasználó átlessz téve egy új ablakba.
+-A felhasználó rákattinthat ezekre a linkekre es azonnal a felhasználó átlessz téve egy új ablakba.
 -Ezekben az ablakokban a felhasználó megtalálhassa a színészeket, a film szervezőit illetve a mozi termek nevét.
 -A felhasználó az "Actors" oldalon hozzátud adni új színészt ha szeretne.
 
