@@ -6956,19 +6956,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DNGVA\\.nuget\\packages\\": {}
+    "C:\\Users\\vrenc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\eTickets\\eTickets\\eTickets.csproj",
+      "projectUniqueName": "C:\\Users\\vrenc\\OneDrive\\Documents\\E G Y E T E M\\CinemaAPI\\eTickets\\eTickets\\eTickets.csproj",
       "projectName": "eTickets",
-      "projectPath": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\eTickets\\eTickets\\eTickets.csproj",
-      "packagesPath": "C:\\Users\\DNGVA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DNGVA\\Source\\Repos\\CinemaAPI\\eTickets\\eTickets\\obj\\",
+      "projectPath": "C:\\Users\\vrenc\\OneDrive\\Documents\\E G Y E T E M\\CinemaAPI\\eTickets\\eTickets\\eTickets.csproj",
+      "packagesPath": "C:\\Users\\vrenc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vrenc\\OneDrive\\Documents\\E G Y E T E M\\CinemaAPI\\eTickets\\eTickets\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DNGVA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vrenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7035,7 +7035,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },
